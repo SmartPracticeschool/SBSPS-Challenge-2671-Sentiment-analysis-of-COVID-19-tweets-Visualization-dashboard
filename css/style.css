@@ -118,6 +118,11 @@ a {
   padding: 25px 20px;
 }
 
+.card-light {
+  background-color: #373a52;
+  padding: 25px 20px;
+}
+
 body {
   background-color: #343e59;
   color: #fff;
@@ -317,6 +322,21 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+#news .section-d .newsgrid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  grid-gap: 1rem;
 }
 
 @media only screen and (max-width: 600px) {
