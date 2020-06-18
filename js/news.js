@@ -223,17 +223,17 @@ async function getData2() {
 }
 
 function getNews() {
-  document.getElementById("news1").innerHTML = `<a href="${links[0]}">
+  document.getElementById("news1").innerHTML = `<a href="${links[0]}" target="_blank">
 <img src="${imgs[0]}" width="400" height="300"><br>
 </a>
 <h3>${titls[0]}</h3>`;
 
-  document.getElementById("news2").innerHTML = `<a href="${links[1]}">
+  document.getElementById("news2").innerHTML = `<a href="${links[1]}" target="_blank">
 <img src="${imgs[1]}" width="400" height="300"><br>
 </a>
 <h3>${titls[1]}</h3>`;
 
-  document.getElementById("news3").innerHTML = `<a href="${links[2]}">
+  document.getElementById("news3").innerHTML = `<a href="${links[2]}" target="_blank">
 <img src="${imgs[2]}" width="400" height="300"><br>
 </a>
 <h3>${titls[2]}</h3>`;
