@@ -1,25 +1,4 @@
-// TIMESERIES STATS
-
-const url = "https://api.covid19india.org/data.json";
-const totalconfirmed = [];
-const totaldeceased = [];
-const totalrecovered = [];
-const date = [];
-getData();
-
-async function getData() {
-  const response = await fetch(url);
-  const data = await response.json();
-  for (let i = 0; i < data.cases_time_series.length; i++) {
-    totalconfirmed.push(data.cases_time_series[i].totalconfirmed);
-    totaldeceased.push(data.cases_time_series[i].totaldeceased);
-    totalrecovered.push(data.cases_time_series[i].totalrecovered);
-    date.push(data.cases_time_series[i].date);
-  }
-  var chart = new ApexCharts(document.querySelector("#timeseries"), optionnew);
-  chart.render();
-}
-
+// Setting Properties for the Charts
 window.Apex = {
   chart: {
     foreColor: "#ccc",
@@ -46,6 +25,34 @@ window.Apex = {
   },
 };
 
+/*              TIMESERIES STATS                   */
+
+// Setting up variable
+const url = "https://api.covid19india.org/data.json";
+const totalconfirmed = [];
+const totaldeceased = [];
+const totalrecovered = [];
+const date = [];
+
+// Calling getData function
+getData();
+
+// Making a function to fetch data from the API
+async function getData() {
+  const response = await fetch(url);
+  const data = await response.json();
+  for (let i = 0; i < data.cases_time_series.length; i++) {
+    totalconfirmed.push(data.cases_time_series[i].totalconfirmed);
+    totaldeceased.push(data.cases_time_series[i].totaldeceased);
+    totalrecovered.push(data.cases_time_series[i].totalrecovered);
+    date.push(data.cases_time_series[i].date);
+  }
+  // Rendering the Chart
+  var chart = new ApexCharts(document.querySelector("#timeseries"), optionnew);
+  chart.render();
+}
+
+// Making the Time-Series Chart
 var optionnew = {
   chart: {
     height: 500,
@@ -64,7 +71,6 @@ var optionnew = {
   stroke: {
     curve: "smooth",
   },
-  //colors: ["#3F51B5", '#2196F3'],
   series: [
     {
       name: "Confirmed",
@@ -118,8 +124,40 @@ var optionnew = {
   },
 };
 
-// STATEWISE STATS
+/*              STATEWISE STATS            */
 
+// Setting up Variables
+const url1 =
+  "https://api.rootnet.in/covid19-in/unofficial/covid19india.org/statewise";
+const confirmed = [];
+const deaths = [];
+const recovered = [];
+const active = [];
+const state = [];
+const total = [];
+
+// Calling getData1 function
+getData1();
+
+// Making a function to fetch data from the 2nd API
+async function getData1() {
+  const response = await fetch(url1);
+  const data = await response.json();
+  for (let i = 0; i < 37; i++) {
+    confirmed.push(data.data.statewise[i].confirmed);
+    deaths.push(data.data.statewise[i].deaths);
+    recovered.push(data.data.statewise[i].recovered);
+    active.push(data.data.statewise[i].active);
+    state.push(data.data.statewise[i].state);
+  }
+  total.push(data.data.total.confirmed);
+  total.push(data.data.total.recovered);
+  total.push(data.data.total.deaths);
+  total.push(data.data.total.active);
+  getTotal();
+}
+
+// Making a function for displaying the stats according to the selected state
 function changeText() {
   x = document.getElementById("mySelect");
   document.querySelector(".state").innerHTML = `State: ${
@@ -139,35 +177,9 @@ function changeText() {
   }`;
 }
 
-const url1 =
-  "https://api.rootnet.in/covid19-in/unofficial/covid19india.org/statewise";
-const confirmed = [];
-const deaths = [];
-const recovered = [];
-const active = [];
-const state = [];
-const total = [];
-getData1();
+/*                 Total Stats                   */
 
-async function getData1() {
-  const response = await fetch(url1);
-  const data = await response.json();
-  for (let i = 0; i < 37; i++) {
-    confirmed.push(data.data.statewise[i].confirmed);
-    deaths.push(data.data.statewise[i].deaths);
-    recovered.push(data.data.statewise[i].recovered);
-    active.push(data.data.statewise[i].active);
-    state.push(data.data.statewise[i].state);
-  }
-  total.push(data.data.total.confirmed);
-  total.push(data.data.total.recovered);
-  total.push(data.data.total.deaths);
-  total.push(data.data.total.active);
-  getTotal();
-}
-
-// Total Stats
-
+// Making a function for displaying the overall stats
 async function getTotal() {
   document.querySelector(
     ".tconfirmed"
