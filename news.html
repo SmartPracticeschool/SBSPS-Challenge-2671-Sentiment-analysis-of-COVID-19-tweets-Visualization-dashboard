@@ -3,42 +3,50 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Font Awesome CDN -->
     <script
       src="https://kit.fontawesome.com/c0455e0533.js"
       crossorigin="anonymous"
     ></script>
+    <!-- ApexCharts CDN -->
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <!-- Link to the CSS File -->
     <link rel="stylesheet" href="./css/style.css" />
-    <title>Sentiment Visualizer</title>
+    <title>Sentylzerr</title>
   </head>
   <body>
     <!-- Navbar -->
     <nav class="navbar">
       <ul class="navbar-nav">
+        <!-- LOGO LINK-->
         <li class="logo">
           <a href="./index.html" class="nav-link">
-            <span class="link-text">SENTIMETER</span>
+            <span class="link-text">Sentylzerr</span>
             <i class="fas fa-smile fa-3x"></i>
           </a>
         </li>
+        <!-- DASHBOARD LINK -->
         <li class="nav-item">
           <a href="./index.html" class="nav-link">
             <i class="fas fa-chart-area fa-3x"></i>
-            <span class="link-text">DashBoard</span>
+            <span class="link-text">Dashboard</span>
           </a>
         </li>
+        <!-- LOCATION-WISE ANALYSIS PAGE LINK -->
         <li class="nav-item">
           <a href="./locolyzer.html" class="nav-link">
             <i class="fas fa-search-location fa-3x"></i>
             <span class="link-text">Locolyzer</span>
           </a>
         </li>
+        <!-- LATEST NEWS PAGE LINK -->
         <li class="nav-item">
           <a href="#" class="nav-link current">
             <i class="fas fa-newspaper fa-3x"></i>
             <span class="link-text">NEWS</span>
           </a>
         </li>
+        <!-- LINK TO FEEDBACK -->
         <li class="nav-item">
           <a href="#feedback" class="nav-link">
             <i class="fas fa-check-square fa-3x"></i>
@@ -47,7 +55,10 @@
         </li>
       </ul>
     </nav>
+
+    <!-- MAIN CONTENT OF THE PAGE -->
     <main id="news">
+      <!-- SECTION-A: OVERALL AND STATEWISE STATS -->
       <section class="section-a">
         <div class="total card text-center">
           <h2 class="text-center">Overall Stats</h2>
@@ -115,9 +126,13 @@
           </div>
         </div>
       </section>
+
+      <!-- SECTION-B: TIME-SERIES CHART -->
       <section class="section-b card">
         <div id="timeseries"></div>
       </section>
+
+      <!-- SECTION-C: LATEST TWEETS -->
       <section class="section-c card">
         <h2>Latest Tweets</h2>
         <div class="tweets">
@@ -159,15 +174,20 @@
           </div>
         </div>
       </section>
-      <section class="section-c card">
+
+      <!-- SECTION-D: LATEST NEWS -->
+      <section class="section-D card">
         <h2>Latest NEWS</h2>
       </section>
     </main>
+
+    <!-- TWITTER WIDGET SCRIPT -->
     <script
       async
       src="https://platform.twitter.com/widgets.js"
       charset="utf-8"
     ></script>
+    <!-- NEWS.JS SCRIPT -->
     <script src="./js/news.js"></script>
   </body>
 </html>
