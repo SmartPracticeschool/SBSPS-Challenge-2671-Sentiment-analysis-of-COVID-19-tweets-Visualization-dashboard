@@ -153,6 +153,16 @@ main {
         align-items: center;
       }
     }
+    &-d {
+      .newsgrid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        grid-gap: 1rem;
+      }
+    }
   }
 }
 
