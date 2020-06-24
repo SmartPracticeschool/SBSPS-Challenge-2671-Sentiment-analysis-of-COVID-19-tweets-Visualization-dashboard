@@ -1,3 +1,5 @@
+Web-App Link:
+
 #### Sentiment analysis of COVID-19 tweets Visualization dashboard
 
 > Problem Statement: Nowadays there is a huge amount of data available on the internet, especially social media. Monitoring all this data would allow us to gain an overview of the wider public opinion behind different states of affairs. We are living in the middle of a pandemic and people are choosing social media platforms to express their opinions about all the government decisions. There is a need to analyze all this information. Using the analyzed data, the concerned authorities could take further decisions keeping the individual’s opinions in mind. 
@@ -15,3 +17,12 @@ News: Our web-app not only visualizes our analysis' results but also provide the
 Feedback Feature: Our web-app has a feedback feature which allows the user to tell about how he/she is feeling about the current situation. This data will be added to our database to increase the data set.
 
 Responsive Design: The app can be viewed on a mobile phone without any problem the elements of the site adjust themselves accordig to the size of the window of the browser.
+
+###### If you want to run this repo you need to do the following:
+1. Install nodejs (if you don't have it)
+2. Clone the repo to your local system
+3. Open your shell/terminal and get to the directory where you cloned the repo
+4. Use the following command ```node server.js``` 
+5. Open your browser and go to the following address ```localhost:3000```
+
+> Note: If your port 3000 is already in use then change the port number in the server.js file and repeat step 4 and go to the address ```localhost:PORT``` where PORT is the number that you changed in the file.
