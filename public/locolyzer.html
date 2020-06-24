@@ -3,14 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Font Awesome CDN : for the Icons used -->
+    <!-- Font Awesome CDN: for the Icons used -->
     <script
       src="https://kit.fontawesome.com/c0455e0533.js"
       crossorigin="anonymous"
     ></script>
-    <!-- ApexCharts CDN: required for the plotting of charts -->
+    <!-- ApexCharts CDN: required for plotting charts -->
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
-    <!-- Link to the CSS File -->
+    <!-- Link to CSS File -->
     <link rel="stylesheet" href="./css/style.css" />
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico" />
@@ -36,14 +36,14 @@
         </li>
         <!-- LOCATION-WISE ANALYSIS PAGE LINK -->
         <li class="nav-item">
-          <a href="./locolyzer.html" class="nav-link">
+          <a href="#" class="nav-link current">
             <i class="fas fa-search-location fa-3x"></i>
             <span class="link-text">Locolyzer</span>
           </a>
         </li>
         <!-- LATEST NEWS PAGE LINK -->
         <li class="nav-item">
-          <a href="#" class="nav-link current">
+          <a href="./news.html" class="nav-link">
             <i class="fas fa-newspaper fa-3x"></i>
             <span class="link-text">NEWS</span>
           </a>
@@ -57,136 +57,78 @@
         </li>
       </ul>
     </nav>
-
-    <!-- MAIN CONTENT OF THE PAGE -->
-    <main id="news">
-      <!-- SECTION-A: OVERALL AND STATEWISE STATS -->
+    <!-- Main content of Locolyzer Page -->
+    <main id="loco">
+      <!-- Section A: Location Selection Section -->
       <section class="section-a">
-        <div class="total card text-center">
-          <h2 class="text-center">Overall Stats</h2>
-          <div class="tconfirmed"></div>
-          <div class="tdeaths"></div>
-          <div class="tactive"></div>
-          <div class="trecovered"></div>
-        </div>
-
-        <div class="statewise card">
-          <form class="text-center">
-            <h2 style="margin: 0;">Statewise Stats</h2>
-            <select id="mySelect" style="padding: 0.5rem;" class="my-1">
-              <option>Maharashtra</option>
-              <option>Tamil Nadu</option>
-              <option>Delhi</option>
-              <option>Gujarat</option>
-              <option>Uttar Pradesh</option>
-              <option>Rajasthan</option>
-              <option>West Bengal</option>
-              <option>Madhya Pradesh</option>
-              <option>Haryana</option>
-              <option>State Unassigned</option>
-              <option>Karnataka</option>
-              <option>Andhra Pradesh</option>
-              <option>Bihar</option>
-              <option>Telangana</option>
-              <option>Jammu and Kashmir</option>
-              <option>Assam</option>
-              <option>Odisha</option>
-              <option>Punjab</option>
-              <option>Kerala</option>
-              <option>Uttarakhand</option>
-              <option>Chhattisgarh</option>
-              <option>Jharkhand</option>
-              <option>Tripura</option>
-              <option>Ladakh</option>
-              <option>Goa</option>
-              <option>Himachal Pradesh</option>
-              <option>Manipur</option>
-              <option>Chandigarh</option>
-              <option>Puducherry</option>
-              <option>Nagaland</option>
-              <option>Mizoram</option>
-              <option>Arunachal Pradesh</option>
-              <option>Sikkim</option>
-              <option>Dadra and Nagar Haveli and Daman and Diu</option>
-              <option>Andaman and Nicobar Islands</option>
-              <option>Meghalaya</option>
-              <option>Lakshadweep</option>
-            </select>
+        <div class="card text-center">
+          <h2>Select a location</h2>
+          <div class="locogrid">
             <input
-              class="btn-light"
               type="button"
-              onclick="changeText()"
-              value="Show Stats of Selected City"
+              onclick="changeToDelhi()"
+              value="DELHI"
+              class="btn-light"
             />
-          </form>
-          <div class="stats">
-            <div class="state"></div>
-            <div class="confirmed"></div>
-            <div class="deaths"></div>
-            <div class="active"></div>
-            <div class="recovered"></div>
+            <input
+              type="button"
+              onclick="changeToMumbai()"
+              value="MUMBAI"
+              class="btn-light"
+            />
+            <input
+              type="button"
+              onclick="changeToChennai()"
+              value="CHENNAI"
+              class="btn-light"
+            />
+            <input
+              type="button"
+              onclick="changeToKolkata()"
+              value="KOLKATA"
+              class="btn-light"
+            />
           </div>
         </div>
       </section>
-
-      <!-- SECTION-B: TIME-SERIES CHART -->
-      <section class="section-b card">
-        <div id="timeseries"></div>
-      </section>
-
-      <!-- SECTION-C: LATEST TWEETS -->
-      <section class="section-c card">
-        <h2>Latest Tweets</h2>
-        <div class="tweets text-center">
-          <div class="tweet">
-            <a
-              style="color: aliceblue;"
-              class="twitter-timeline"
-              data-width="350"
-              data-height="400"
-              data-theme="dark"
-              data-chrome="nofooter noborders noscrollbar"
-              href="https://twitter.com/WHO?ref_src=twsrc%5Etfw"
-              >Tweets by WHO</a
-            >
-          </div>
-          <div class="tweet">
-            <a
-              style="color: aliceblue;"
-              class="twitter-timeline"
-              data-width="350"
-              data-height="400"
-              data-theme="dark"
-              data-chrome="nofooter noborders noscrollbar"
-              href="https://twitter.com/govtofindia_"
-              >Tweets by Govt Of India</a
-            >
-          </div>
-          <div class="tweet">
-            <a
-              style="color: aliceblue;"
-              class="twitter-timeline"
-              data-width="350"
-              data-height="400"
-              data-theme="dark"
-              data-chrome="nofooter noborders noscrollbar"
-              href="https://twitter.com/COVIDIndiaTrack"
-              >Tweets by COVID India Track</a
-            >
+      <!-- Section B: Selected Location Details -->
+      <section class="section-b">
+        <div class="card">
+          <h2 id="selectedloc" class="text-center">Selected Location: Delhi</h2>
+          <div class="sparkboxes">
+            <div class="box box1">
+              <div class="details">
+                <h3>POSITIVE</h3>
+              </div>
+              <div id="spark4"></div>
+            </div>
+            <div class="box box2">
+              <div class="details">
+                <h3>NEUTRAL</h3>
+              </div>
+              <div id="spark5"></div>
+            </div>
+            <div class="box box3">
+              <div class="details">
+                <h3>NEGATIVE</h3>
+              </div>
+              <div id="spark6"></div>
+            </div>
           </div>
         </div>
       </section>
-
-      <!-- SECTION-D: LATEST NEWS -->
-      <section class="section-d card">
-        <h2 style="margin-bottom: 3.5rem;">Latest NEWS</h2>
-        <div class="newsgrid">
-          <div id="news1"></div>
-          <div id="news2"></div>
-          <div id="news3"></div>
+      <!-- Section C: Datewise analysis of last 14 days BAR GRAPH according to the location -->
+      <section class="section-c">
+        <div class="card">
+          <div id="loco-datewise"></div>
         </div>
       </section>
-
+      <!-- Section D: Datewise analysis of last 14 days LINE GRAPH according to the location -->
+      <section class="section-d">
+        <div class="card">
+          <div id="loco-linez"></div>
+        </div>
+      </section>
       <!-- Feedback Footer -->
       <footer id="feedback" class="footer card">
         <h2 class="text-center">
@@ -227,18 +169,11 @@
       integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
       crossorigin="anonymous"
     ></script>
-
-    <!-- TWITTER WIDGET SCRIPT -->
-    <script
-      async
-      src="https://platform.twitter.com/widgets.js"
-      charset="utf-8"
-    ></script>
-    <!-- NEWS.JS SCRIPT -->
-    <script src="./js/news.js"></script>
+    <!-- Locolyzer Script -->
+    <script src="./js/locolyzer.js"></script>
     <!-- SMOOTH SCROLLING SCRIPT -->
     <script src="./js/smooth.js"></script>
-    <!-- FEEDBACK SCRIPT -->
+    <!-- Feedback Script -->
     <script src="./js/feedback.js"></script>
   </body>
 </html>
