@@ -32,7 +32,19 @@ function sendData() {
   };
   // Using fetch to post
   fetch("/api", options);
-  location.reload();
+  
+  // Creating response
+  const div = document.createElement("div");
+  div.className = `alert text-center card-light my-1`;
+  div.appendChild(document.createTextNode("Your Response Was Recorded"));
+  const container = document.querySelector("#feedback");
+  const form = document.querySelector("#feedback-form");
+  container.insertBefore(div, form);
+
+  // Timeout after 3 sec
+  setTimeout(function () {
+    document.querySelector(".alert").remove();
+  }, 3000);
 }
 
 // Calling getData3
