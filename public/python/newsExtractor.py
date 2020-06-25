@@ -3,7 +3,7 @@ from newsapi import NewsApiClient
 import pandas as pd
 
 # Setting up client using API Key
-newsapi = NewsApiClient(api_key='eefe7e300a174e9f8ca25f2ad39cde63')
+newsapi = NewsApiClient(api_key='YOUR_API_KEY')
 # Extracting top headlines
 top_headlines = newsapi.get_top_headlines(q='covid',language='en',country='in')
 # Extracting articles from the headlines
