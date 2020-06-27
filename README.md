@@ -1,6 +1,3 @@
-Web-App Link: https://fierce-reef-77964.herokuapp.com/
-
-Demonstration:
 
 #### Sentiment analysis of COVID-19 tweets Visualization dashboard
 
