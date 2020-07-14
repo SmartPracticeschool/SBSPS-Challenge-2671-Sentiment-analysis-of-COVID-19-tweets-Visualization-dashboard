@@ -1,0 +1,175 @@
+// Buttons
+
+%btn-shared {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  transition: all 0.5s;
+  border: none;
+  cursor: pointer;
+}
+
+.btn {
+  &-main {
+    @extend %btn-shared;
+    color: set-text-color($main-color);
+    background-color: $main-color;
+  }
+  &-light {
+    @extend %btn-shared;
+    color: set-text-color($light-color);
+    background-color: $light-color;
+  }
+  &-dark {
+    @extend %btn-shared;
+    color: set-text-color($dark-color);
+    background-color: $dark-color;
+  }
+}
+
+button[class^="btn-"]:hover,
+a[class^="btn-"]:hover,
+input[class^="btn-"]:hover {
+  color: set-text-color($bg-color);
+  background-color: $bg-color;
+}
+
+.lead {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.info {
+  text-transform: uppercase;
+  padding: 0.4rem 0.6rem;
+  border-radius: 15px;
+  margin-bottom: 0.5rem;
+  background: $bg-color;
+  width: 70%;
+  margin: auto;
+}
+
+.bottom-line {
+  height: 4px;
+  width: 8rem;
+  background: palevioletred;
+  display: block;
+  margin: -1rem auto 0.5rem auto;
+}
+
+// Padding
+
+.py {
+  &-1 {
+    padding: 1rem 0;
+  }
+  &-2 {
+    padding: 2rem 0;
+  }
+  &-3 {
+    padding: 3rem 0;
+  }
+  &-4 {
+    padding: 4rem 0;
+  }
+}
+
+// Margin
+
+.my {
+  &-1 {
+    margin: 1rem 0;
+  }
+  &-2 {
+    margin: 2rem 0;
+  }
+  &-3 {
+    margin: 3rem 0;
+  }
+  &-4 {
+    margin: 4rem 0;
+  }
+}
+
+.bg {
+  &-main {
+    background: $main-color;
+    color: set-text-color($main-color);
+  }
+  &-dark {
+    background: $dark-color;
+    color: set-text-color($dark-color);
+  }
+  &-light {
+    background: $light-color;
+    color: set-text-color($light-color);
+  }
+  &-medium {
+    background: $medium-color;
+    color: set-text-color($medium-color);
+  }
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+img {
+  width: 100%;
+}
+
+.card {
+  background-color: #2b2d3e;
+  padding: 25px 20px;
+}
+
+.card-light {
+  background-color: #373a52;
+  padding: 25px 20px;
+}
+
+.card-light2 {
+  background-color: $bg-color;
+  padding: 25px 20px;
+}
+
+.data {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 0.5rem;
+  padding: 0.5rem;
+}
+
+.inc {
+  display: inline-block;
+
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  padding: 0.4rem 0.6rem;
+  border-radius: 15px;
+  margin-left: 0.7rem;
+}
+
+.inc-death {
+  background: #333;
+  color: set-text-color(#333);
+}
+
+.inc-recovery {
+  background: seagreen;
+  color: set-text-color(seagreen);
+}
+
+.inc-active {
+  background: tomato;
+  color: set-text-color(tomato);
+}
+
+.inc-confirm {
+  background: turquoise;
+  color: set-text-color(turquoise);
+}

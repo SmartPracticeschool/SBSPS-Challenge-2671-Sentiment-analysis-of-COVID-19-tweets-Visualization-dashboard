@@ -1,0 +1,17 @@
+// Variables
+
+$main-color: #2b2d3e;
+$light-color: #f4f4f4;
+$medium-color: #ccc;
+$dark-color: #333;
+$bg-color: #343e59;
+
+// SET TEXT COLOR
+
+@function set-text-color($color) {
+  @if (lightness($color) > 50) {
+    @return #000;
+  } @else {
+    @return #fff;
+  }
+}
