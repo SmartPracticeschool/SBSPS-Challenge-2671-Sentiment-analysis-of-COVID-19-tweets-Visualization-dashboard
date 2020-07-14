@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Font Awesome CDN : for the Icons used -->
+    <script
+      src="https://kit.fontawesome.com/c0455e0533.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- ApexCharts CDN: required for the plotting of charts -->
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <!-- Link to the CSS File -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico" />
+    <title>Sentilyzerr</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <ul class="navbar-nav">
+        <!-- LOGO LINK-->
+        <li class="logo">
+          <a href="./index.html" class="nav-link">
+            <span class="link-text">Sentilyzerr</span>
+            <i class="fas fa-smile fa-3x"></i>
+          </a>
+        </li>
+        <!-- DASHBOARD LINK -->
+        <li class="nav-item">
+          <a href="./dashboard.html" class="nav-link">
+            <i class="fas fa-chart-area fa-3x"></i>
+            <span class="link-text">Dashboard</span>
+          </a>
+        </li>
+        <!-- LOCATION-WISE ANALYSIS PAGE LINK -->
+        <li class="nav-item">
+          <a href="./locolyzer.html" class="nav-link">
+            <i class="fas fa-search-location fa-3x"></i>
+            <span class="link-text">Locolyzer</span>
+          </a>
+        </li>
+        <!-- LATEST NEWS PAGE LINK -->
+        <li class="nav-item">
+          <a href="#" class="nav-link current">
+            <i class="fas fa-newspaper fa-3x"></i>
+            <span class="link-text">NEWS</span>
+          </a>
+        </li>
+        <!-- LINK TO LIVE ANALYSIS -->
+        <li class="nav-item">
+          <a href="./live.html" class="nav-link">
+            <i class="fas fa-play fa-3x"></i>
+            <span class="link-text">LIVE Analysis</span>
+          </a>
+        </li>
+        <!-- LINK TO FEEDBACK -->
+        <li class="nav-item">
+          <a href="#feedback" class="nav-link">
+            <i class="fas fa-check-square fa-3x"></i>
+            <span class="link-text">Feedback</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- MAIN CONTENT OF THE PAGE -->
+    <main id="news">
+      <!-- SECTION-A: OVERALL AND STATEWISE STATS -->
+      <section class="section-a">
+        <!-- Overall Stats -->
+        <div class="total card">
+          <h2 class="text-center">Overall Stats</h2>
+          <div class="bottom-line"></div>
+          <div class="data">
+            <span>
+              Total Confirmed Cases:
+            </span>
+            <div>
+              <span id="tconfirmed">loading..</span>
+              <span class="inc inc-confirm"></span>
+            </div>
+          </div>
+          <div class="data">
+            <span>
+              Total Deaths:
+            </span>
+            <div>
+              <span id="tdeaths">loading..</span>
+              <span class="inc inc-death"></span>
+            </div>
+          </div>
+          <div class="data">
+            <span>
+              Total Active Cases:
+            </span>
+
+            <span id="tactive">loading..</span>
+          </div>
+          <div class="data">
+            <span>
+              Total Recovered:
+            </span>
+            <div>
+              <span id="trecovered">loading..</span>
+              <span class="inc inc-recovery"></span>
+            </div>
+          </div>
+        </div>
+        <!-- Statewise Stats -->
+        <div class="statewise card">
+          <form class="text-center">
+            <h2 style="margin: 0;">Statewise Stats</h2>
+            <select id="mySelect" style="padding: 0.5rem;" class="my-1">
+              <option id="1">Maharashtra</option>
+              <option id="2">Tamil Nadu</option>
+              <option id="3">Delhi</option>
+              <option id="4">Gujarat</option>
+              <option id="5">Uttar Pradesh</option>
+              <option id="6">Rajasthan</option>
+              <option id="7">West Bengal</option>
+              <option id="8">Madhya Pradesh</option>
+              <option id="9">Haryana</option>
+              <option id="10">State Unassigned</option>
+              <option id="11">Karnataka</option>
+              <option id="12">Andhra Pradesh</option>
+              <option id="13">Bihar</option>
+              <option id="14">Telangana</option>
+              <option id="15">Jammu and Kashmir</option>
+              <option id="16">Assam</option>
+              <option id="17">Odisha</option>
+              <option id="18">Punjab</option>
+              <option id="19">Kerala</option>
+              <option id="20">Uttarakhand</option>
+              <option id="21">Chhattisgarh</option>
+              <option id="22">Jharkhand</option>
+              <option id="23">Tripura</option>
+              <option id="24">Ladakh</option>
+              <option id="25">Goa</option>
+              <option id="26">Himachal Pradesh</option>
+              <option id="27">Manipur</option>
+              <option id="28">Chandigarh</option>
+              <option id="29">Puducherry</option>
+              <option id="30">Nagaland</option>
+              <option id="31">Mizoram</option>
+              <option id="32">Arunachal Pradesh</option>
+              <option id="33">Sikkim</option>
+              <option id="34">Dadra and Nagar Haveli and Daman and Diu</option>
+              <option id="35">Andaman and Nicobar Islands</option>
+              <option id="36">Meghalaya</option>
+              <option id="37">Lakshadweep</option>
+            </select>
+            <input
+              class="btn-light"
+              type="button"
+              onclick="changeText()"
+              value="Show Stats of Selected City"
+            />
+          </form>
+          <div class="stats">
+            <div class="data">
+              <span>
+                State:
+              </span>
+              <span class="state">Select Location</span>
+            </div>
+            <div class="data">
+              <span>
+                Confirmed Cases:
+              </span>
+              <span class="confirmed"></span>
+            </div>
+            <div class="data">
+              <span>
+                Deaths:
+              </span>
+              <span class="deaths"></span>
+            </div>
+            <div class="data">
+              <span>
+                Active Cases:
+              </span>
+              <span class="active"></span>
+            </div>
+            <div class="data">
+              <span>
+                Recovered:
+              </span>
+              <span class="recovered"></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION-B: TIME-SERIES CHART -->
+      <section class="section-b card">
+        <div id="timeseries"></div>
+      </section>
+
+      <!-- SECTION-C: LATEST TWEETS -->
+      <section class="section-c card">
+        <h2>Latest Tweets</h2>
+        <div class="tweets text-center">
+          <!-- Tweets by WHO -->
+          <div class="tweet">
+            <a
+              style="color: aliceblue;"
+              class="twitter-timeline"
+              data-width="350"
+              data-height="400"
+              data-theme="dark"
+              data-chrome="nofooter noborders noscrollbar"
+              href="https://twitter.com/WHO?ref_src=twsrc%5Etfw"
+              >Tweets by WHO</a
+            >
+          </div>
+          <!-- Tweets by Govt Of India -->
+          <div class="tweet">
+            <a
+              style="color: aliceblue;"
+              class="twitter-timeline"
+              data-width="350"
+              data-height="400"
+              data-theme="dark"
+              data-chrome="nofooter noborders noscrollbar"
+              href="https://twitter.com/govtofindia_"
+              >Tweets by Govt Of India</a
+            >
+          </div>
+          <!-- Tweets by COVID India Track -->
+          <div class="tweet">
+            <a
+              style="color: aliceblue;"
+              class="twitter-timeline"
+              data-width="350"
+              data-height="400"
+              data-theme="dark"
+              data-chrome="nofooter noborders noscrollbar"
+              href="https://twitter.com/COVIDIndiaTrack"
+              >Tweets by COVID India Track</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION-D: LATEST NEWS -->
+      <section class="section-d card">
+        <h2 style="margin-bottom: 3.5rem;">Latest NEWS</h2>
+        <p id="no-news"></p>
+        <div class="newsgrid">
+          <div id="news1" class="card-light" style="height: 360px;"></div>
+          <div id="news2" class="card-light" style="height: 360px;"></div>
+          <div id="news3" class="card-light" style="height: 360px;"></div>
+          <div id="news4" class="card-light" style="height: 360px;"></div>
+          <div id="news5" class="card-light" style="height: 360px;"></div>
+          <div id="news6" class="card-light" style="height: 360px;"></div>
+        </div>
+      </section>
+
+      <!-- Feedback Footer -->
+      <footer id="feedback" class="footer card">
+        <h2 class="text-center">
+          What do you feel about the current situation?
+        </h2>
+        <form class="formgrid">
+          <div class="cc-selector text-center emogrid">
+            <div>
+              <input id="happy" type="radio" name="reaction" value="happy" />
+              <label class="feed happy" for="happy"></label>
+            </div>
+            <div>
+              <input
+                id="neutral"
+                type="radio"
+                name="reaction"
+                value="neutral"
+              />
+              <label class="feed neutral" for="neutral"></label>
+            </div>
+            <div id="saddiv">
+              <input id="sad" type="radio" name="reaction" value="sad" />
+              <label class="feed sad" for="sad"></label>
+            </div>
+          </div>
+          <input
+            class="btn-light text-center mar"
+            type="button"
+            value="Submit"
+            onclick="sendData()"
+          />
+        </form>
+      </footer>
+    </main>
+    <!-- ChatBot Script -->
+    <script>
+      window.watsonAssistantChatOptions = {
+        integrationID: "ba949a27-5619-4546-99a4-dd73f8d4a5a7", // The ID of this integration.
+        region: "eu-gb", // The region your integration is hosted in.
+        serviceInstanceID: "348480b6-8812-4d8f-b806-7277170b8c14", // The ID of your service instance.
+        onLoad: function (instance) {
+          instance.render();
+        },
+      };
+      setTimeout(function () {
+        const t = document.createElement("script");
+        t.src =
+          "https://web-chat.global.assistant.watson.appdomain.cloud/loadWatsonAssistantChat.js";
+        document.head.appendChild(t);
+      });
+    </script>
+    <!-- JQuery CDN -->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- TWITTER WIDGET SCRIPT -->
+    <script
+      async
+      src="https://platform.twitter.com/widgets.js"
+      charset="utf-8"
+    ></script>
+    <!-- NEWS.JS SCRIPT -->
+    <script src="./js/news.js"></script>
+    <!-- SMOOTH SCROLLING SCRIPT -->
+    <script src="./js/smooth.js"></script>
+    <!-- FEEDBACK SCRIPT -->
+    <script src="./js/feedback.js"></script>
+  </body>
+</html>

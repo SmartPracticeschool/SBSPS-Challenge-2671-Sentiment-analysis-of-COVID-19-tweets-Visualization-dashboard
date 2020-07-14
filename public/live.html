@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Font Awesome CDN: for the Icons used -->
+    <script
+      src="https://kit.fontawesome.com/c0455e0533.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- ApexCharts CDN: required for plotting charts -->
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <!-- Link to CSS File -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico" />
+    <title>Sentilyzerr</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <ul class="navbar-nav">
+        <!-- LOGO LINK-->
+        <li class="logo">
+          <a href="./index.html" class="nav-link">
+            <span class="link-text">Sentilyzerr</span>
+            <i class="fas fa-smile fa-3x"></i>
+          </a>
+        </li>
+        <!-- DASHBOARD LINK -->
+        <li class="nav-item">
+          <a href="./dashboard.html" class="nav-link">
+            <i class="fas fa-chart-area fa-3x"></i>
+            <span class="link-text">Dashboard</span>
+          </a>
+        </li>
+        <!-- LOCATION-WISE ANALYSIS PAGE LINK -->
+        <li class="nav-item">
+          <a href="./locolyzer.html" class="nav-link">
+            <i class="fas fa-search-location fa-3x"></i>
+            <span class="link-text">Locolyzer</span>
+          </a>
+        </li>
+        <!-- LATEST NEWS PAGE LINK -->
+        <li class="nav-item">
+          <a href="./news.html" class="nav-link">
+            <i class="fas fa-newspaper fa-3x"></i>
+            <span class="link-text">NEWS</span>
+          </a>
+        </li>
+        <!-- LINK TO LIVE ANALYSIS -->
+        <li class="nav-item">
+          <a href="#" class="nav-link current">
+            <i class="fas fa-play fa-3x"></i>
+            <span class="link-text">LIVE Analysis</span>
+          </a>
+        </li>
+        <!-- LINK TO FEEDBACK -->
+        <li class="nav-item">
+          <a href="#feedback" class="nav-link">
+            <i class="fas fa-check-square fa-3x"></i>
+            <span class="link-text">Feedback</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <!-- Main content of Locolyzer Page -->
+    <main id="live">
+      <!-- Description -->
+      <section class="section-a card">
+        <h2 class="text-center">LIVE Sentiment Analysis</h2>
+        <div class="bottom-line"></div>
+        <p class="text-center">
+          This page provides the visualization of live sentiment analysis of the
+          latest 100 tweets on COVID19. <br />The data updates every 25 seconds.
+        </p>
+      </section>
+      <section class="section-b card">
+        <!-- LIVE Radial Distribution -->
+        <div id="radial-live"></div>
+        <!-- LIVE Doughnut -->
+        <div id="pie-live"></div>
+        <!-- LIVE Radar -->
+        <div id="polar-live"></div>
+      </section>
+      <section class="sectiom-c card">
+        <!-- LIVE LINE GRAPH -->
+        <div id="linez-live"></div>
+      </section>
+
+      <!-- Feedback Footer -->
+      <footer id="feedback" class="footer card">
+        <h2 class="text-center">
+          What do you feel about the current situation?
+        </h2>
+        <form class="formgrid">
+          <div class="cc-selector text-center emogrid">
+            <div>
+              <input id="happy" type="radio" name="reaction" value="happy" />
+              <label class="feed happy" for="happy"></label>
+            </div>
+            <div>
+              <input
+                id="neutral"
+                type="radio"
+                name="reaction"
+                value="neutral"
+              />
+              <label class="feed neutral" for="neutral"></label>
+            </div>
+            <div id="saddiv">
+              <input id="sad" type="radio" name="reaction" value="sad" />
+              <label class="feed sad" for="sad"></label>
+            </div>
+          </div>
+          <input
+            class="btn-light text-center mar"
+            type="button"
+            value="Submit"
+            onclick="sendData()"
+          />
+        </form>
+      </footer>
+    </main>
+    <!-- ChatBot Script -->
+    <script>
+      window.watsonAssistantChatOptions = {
+        integrationID: "ba949a27-5619-4546-99a4-dd73f8d4a5a7", // The ID of this integration.
+        region: "eu-gb", // The region your integration is hosted in.
+        serviceInstanceID: "348480b6-8812-4d8f-b806-7277170b8c14", // The ID of your service instance.
+        onLoad: function (instance) {
+          instance.render();
+        },
+      };
+      setTimeout(function () {
+        const t = document.createElement("script");
+        t.src =
+          "https://web-chat.global.assistant.watson.appdomain.cloud/loadWatsonAssistantChat.js";
+        document.head.appendChild(t);
+      });
+    </script>
+    <!-- JQuery CDN -->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <!-- Live Script -->
+    <script src="./js/live.js"></script>
+    <!-- SMOOTH SCROLLING SCRIPT -->
+    <script src="./js/smooth.js"></script>
+    <!-- Feedback Script -->
+    <script src="./js/feedback.js"></script>
+  </body>
+</html>

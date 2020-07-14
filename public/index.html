@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Font Awesome CDN: for the Icons used -->
+    <script
+      src="https://kit.fontawesome.com/c0455e0533.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- ApexCharts CDN: required for plotting charts -->
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <!-- Link to CSS File -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico" />
+    <title>Sentilyzerr</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <ul class="navbar-nav">
+        <!-- LOGO LINK-->
+        <li class="logo">
+          <a href="#" class="nav-link current">
+            <span class="link-text">Sentilyzerr</span>
+            <i class="fas fa-smile fa-3x"></i>
+          </a>
+        </li>
+        <!-- DASHBOARD LINK -->
+        <li class="nav-item">
+          <a href="./dashboard.html" class="nav-link">
+            <i class="fas fa-chart-area fa-3x"></i>
+            <span class="link-text">Dashboard</span>
+          </a>
+        </li>
+        <!-- LOCATION-WISE ANALYSIS PAGE LINK -->
+        <li class="nav-item">
+          <a href="./locolyzer.html" class="nav-link">
+            <i class="fas fa-search-location fa-3x"></i>
+            <span class="link-text">Locolyzer</span>
+          </a>
+        </li>
+        <!-- LATEST NEWS PAGE LINK -->
+        <li class="nav-item">
+          <a href="./news.html" class="nav-link">
+            <i class="fas fa-newspaper fa-3x"></i>
+            <span class="link-text">NEWS</span>
+          </a>
+        </li>
+        <!-- LINK TO LIVE ANALYSIS -->
+        <li class="nav-item">
+          <a href="./live.html" class="nav-link">
+            <i class="fas fa-play fa-3x"></i>
+            <span class="link-text">LIVE Analysis</span>
+          </a>
+        </li>
+        <!-- LINK TO FEEDBACK -->
+        <li class="nav-item">
+          <a href="#feedback" class="nav-link">
+            <i class="fas fa-check-square fa-3x"></i>
+            <span class="link-text">Feedback</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <!-- Main content of Locolyzer Page -->
+    <main id="home">
+      <!-- SECTION A: APP DESCRIPTION -->
+      <section class="section-a card">
+        <h1 class="text-center">WELCOME TO SENTILYZERR</h1>
+        <div class="bottom-line"></div>
+        <div id="grid-one">
+          <img src="./img/1.png" alt="" />
+          <div>
+            <h1>
+              Stay
+              <span
+                class="txt-type"
+                data-wait="2000"
+                data-words='["Home!","Safe!","Informed!"]'
+              ></span>
+            </h1>
+            <p class="text-center">
+              Sentilyzerr is a web app which visualises the Sentiment Analysis
+              of Covid-19 related data available on Twitter. This app has
+              interactive dashboards which provide latest analysed data and
+              information about the situation of Coronavirus across the country.
+              It also has a feature of live analysis of tweets.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- SECTION B: FEATURES -->
+      <section class="section-b card">
+        <h1 class="text-center">Let's see what are you in for !!</h1>
+        <div class="bottom-line"></div>
+        <p class="text-center">
+          Our app provides the following features: <br /><br />
+          Links to everything is on the left in the navbar.
+        </p>
+        <div id="grid-two">
+          <div class="card-light">
+            <h2 class="text-center">
+              The Dashboard
+            </h2>
+            <p class="text-center">
+              This interactive dashboard provides analysis of data collected
+              across India. This contains different charts for the results of
+              the sentiment analysis. The charts are interactive and you can
+              remove or add the data with a click.
+            </p>
+          </div>
+          <div class="card-light">
+            <h2 class="text-center">
+              Locolyzer
+            </h2>
+            <p class="text-center">
+              This page contains different charts for the results of the
+              sentiment analysis done location-wise. We have selected main 6
+              locations and we will visualize the results according to the
+              location. The location and data can be changed with one click.
+            </p>
+          </div>
+          <div class="card-light">
+            <h2 class="text-center">
+              NEWS
+            </h2>
+            <p class="text-center">
+              Our web-app not only visualizes our analysis' results but also
+              provide the user with the latest updates like confirmed & active
+              cases, recovery & death rates, latest tweets and latest news
+              articles by leading NEWS sites.
+            </p>
+          </div>
+          <div class="card-light">
+            <h2 class="text-center">
+              LIVE Analysis
+            </h2>
+            <p class="text-center">
+              Our web-app also has a LIVE Analysis page. This page renders
+              charts of 100 tweets which are fetch and analysed every 25
+              seconds. This provides a real-time analysis of the latest tweets.
+            </p>
+          </div>
+          <div class="card-light">
+            <h2 class="text-center">
+              COVID InfoBot
+            </h2>
+            <p class="text-center">
+              We have used the IBM Watson Assistant to build a COVID Info Bot
+              for our app which answers all of the queries related to the
+              ongoing Pandemic. It's right there on the bottom, give it a try.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- SECTION C: INFO ON COVID -->
+      <section class="section-c card">
+        <img src="./img/17.png" alt="" />
+        <div>
+          <h2 class="text-center">
+            INFO ON COVID19
+          </h2>
+          <div class="bottom-line"></div>
+          <p class="text-center">
+            Coronaviruses are a family of viruses that can cause illnesses such
+            as the common cold, severe acute respiratory syndrome (SARS) and
+            Middle East respiratory syndrome (MERS). In 2019, a new coronavirus
+            was identified as the cause of a disease outbreak that originated in
+            China. <br />
+            In March 2020, the World Health Organization (WHO) declared the
+            COVID-19 outbreak a pandemic. <br />
+            <br />
+            Now let's look at some symptoms and prevention methods.
+          </p>
+        </div>
+      </section>
+      <!-- SECTION D: SYMPTOMS -->
+      <section class="section-d card">
+        <h2 class="text-center">SYMPTOMS</h2>
+        <div class="bottom-line"></div>
+        <div id="grid-three">
+          <div>
+            <img src="./img/2.png" alt="" />
+            <p class="info text-center">Runny Nose</p>
+          </div>
+          <div>
+            <img src="./img/3.png" alt="" />
+            <p class="info text-center">Sore Throat</p>
+          </div>
+          <div>
+            <img src="./img/4.png" alt="" />
+            <p class="info text-center">Cough</p>
+          </div>
+          <div>
+            <img src="./img/5.png" alt="" />
+            <p class="info text-center">Fever</p>
+          </div>
+          <div>
+            <img src="./img/6.png" alt="" />
+            <p class="info text-center">Pneumonia</p>
+          </div>
+          <div>
+            <img src="./img/7.png" alt="" />
+            <p class="info text-center">Difficulty Breathing</p>
+          </div>
+        </div>
+      </section>
+      <!-- SECTION F: TRANSMISSION -->
+      <section class="section-f card">
+        <h2 class="text-center">Transmission</h2>
+        <div class="bottom-line"></div>
+        <div id="grid-four">
+          <div>
+            <img src="./img/14.png" alt="" />
+            <p class="info text-center">
+              Personal Contact
+            </p>
+          </div>
+          <div>
+            <img src="./img/15.png" alt="" />
+            <p class="info text-center">Contaminated object</p>
+          </div>
+        </div>
+      </section>
+      <!-- SECTION E: PREVENTION -->
+      <section class="section-e card">
+        <h2 class="text-center">PREVENTION</h2>
+        <div class="bottom-line"></div>
+        <div id="grid-three">
+          <div>
+            <img src="./img/8.png" alt="" />
+            <p class="info text-center">
+              Wash your hands <br />[Use soap and gel alcohol]
+            </p>
+          </div>
+          <div>
+            <img src="./img/9.png" alt="" />
+            <p class="info text-center">Maintain Social Distancing</p>
+          </div>
+          <div>
+            <img src="./img/10.png" alt="" />
+            <p class="info text-center">Avoid touching ees, nose and mouth</p>
+          </div>
+          <div>
+            <img src="./img/11.png" alt="" />
+            <p class="info text-center">Practice respiratory hygiene</p>
+          </div>
+          <div>
+            <img src="./img/12.png" alt="" />
+            <p class="info text-center">Use of mask</p>
+          </div>
+          <div>
+            <img src="./img/13.png" alt="" />
+            <p class="info text-center">Seek medical help early</p>
+          </div>
+        </div>
+      </section>
+      <!-- SECTION G: STAY INFORMED -->
+      <section class="section-g card">
+        <img src="./img/16.png" alt="" />
+        <div>
+          <h2 class="text-center">And most importantly stayed informed</h2>
+          <p class="text-center">
+            Use our web-app to get all the information you need. Know how the
+            fellow citizens feel. Get the latest tweets, NEWS and Statistics.
+          </p>
+        </div>
+      </section>
+      <!-- ATTRIBUTION FOR THE PICTURES USED -->
+      <section style="text-align: end;">
+        Attribution:
+        <a target="_blank" href="https://www.vexels.com/graphics/covid/">
+          Covid 19 icons
+        </a>
+        | Designed by Vexels.com
+      </section>
+      <!-- SECTION H: TEAM MEMBERS -->
+      <section class="section-h">
+        <h2 class="text-center">This is our team..</h2>
+        <div id="team">
+          <div class="card">
+            <img
+              src="https://avatars1.githubusercontent.com/u/60072148?s=400&u=dbcc0bed518520a6e272db340b1ee40d358d3a37&v=4"
+              alt=""
+            />
+            <h3 class="text-center">Sravani Sai M. | Data Science & ML</h3>
+            <a href="https://github.com/SravaniMalekar" target="_blank"
+              ><i class="fab fa-github-square fa-3x"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/sravani-malekar-7815211a0/"
+              target="_blank"
+              ><i class="fab fa-linkedin fa-3x"></i
+            ></a>
+          </div>
+          <div class="card-light">
+            <img
+              src="https://avatars0.githubusercontent.com/u/58233202?s=460&u=8bb5c31822d3d39ffa329a37df534a834a7345fd&v=4"
+              alt=""
+            />
+            <h3 class="text-center">Akhil Jayan | UI Design</h3>
+            <a href="https://github.com/akhiljayan29aj" target="_blank"
+              ><i class="fab fa-github-square fa-3x"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/akhil-jayan-569859175/"
+              target="_blank"
+              ><i class="fab fa-linkedin fa-3x"></i
+            ></a>
+          </div>
+
+          <div class="card">
+            <img
+              src="https://avatars0.githubusercontent.com/u/46688469?s=400&u=1c6af8529c88017c4d4cb309bb88b8b8050b4ddf&v=4"
+              alt=""
+            />
+            <h3 class="text-center">Tanisha Bharol | Data Science & ML</h3>
+            <a href="https://github.com/tubbytani" target="_blank"
+              ><i class="fab fa-github-square fa-3x"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/tanisha-bharol-733992181/"
+              target="_blank"
+              ><i class="fab fa-linkedin fa-3x"></i
+            ></a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Feedback Footer -->
+      <footer id="feedback" class="footer card">
+        <h2 class="text-center">
+          What do you feel about the current situation?
+        </h2>
+        <form class="formgrid">
+          <div class="cc-selector text-center emogrid">
+            <div>
+              <input id="happy" type="radio" name="reaction" value="happy" />
+              <label class="feed happy" for="happy"></label>
+            </div>
+            <div>
+              <input
+                id="neutral"
+                type="radio"
+                name="reaction"
+                value="neutral"
+              />
+              <label class="feed neutral" for="neutral"></label>
+            </div>
+            <div id="saddiv">
+              <input id="sad" type="radio" name="reaction" value="sad" />
+              <label class="feed sad" for="sad"></label>
+            </div>
+          </div>
+          <input
+            class="btn-light text-center mar"
+            type="button"
+            value="Submit"
+            onclick="sendData()"
+          />
+        </form>
+      </footer>
+    </main>
+    <!-- ChatBot Script -->
+    <script>
+      window.watsonAssistantChatOptions = {
+        integrationID: "ba949a27-5619-4546-99a4-dd73f8d4a5a7", // The ID of this integration.
+        region: "eu-gb", // The region your integration is hosted in.
+        serviceInstanceID: "348480b6-8812-4d8f-b806-7277170b8c14", // The ID of your service instance.
+        onLoad: function (instance) {
+          instance.render();
+        },
+      };
+      setTimeout(function () {
+        const t = document.createElement("script");
+        t.src =
+          "https://web-chat.global.assistant.watson.appdomain.cloud/loadWatsonAssistantChat.js";
+        document.head.appendChild(t);
+      });
+    </script>
+    <!-- JQuery CDN -->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <!-- SMOOTH SCROLLING SCRIPT -->
+    <script src="./js/smooth.js"></script>
+    <!-- Typewriter Script -->
+    <script src="./js/type.js"></script>
+    <!-- Feedback Script -->
+    <script src="./js/feedback.js"></script>
+  </body>
+</html>
