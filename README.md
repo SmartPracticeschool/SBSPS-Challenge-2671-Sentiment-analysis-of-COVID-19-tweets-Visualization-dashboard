@@ -1,8 +1,10 @@
 #### Sentiment analysis of COVID-19 tweets Visualization dashboard
 
-DEMO LINK:
+DEMO LINK: [Click Here]()
 
 WEBAPP LINK: [Click Here](https://sentilyzerr.herokuapp.com/news.html)
+
+Presentation Link: [Click Here](https://docs.google.com/presentation/d/17Syv9AWA1bY8wvl-wlht4FNbrq0GDAMa6pi90L3hvRY/edit)
 
 > Problem Statement: Nowadays there is a huge amount of data available on the internet, especially social media. Monitoring all this data would allow us to gain an overview of the wider public opinion behind different states of affairs. We are living in the middle of a pandemic and people are choosing social media platforms to express their opinions about all the government decisions. There is a need to analyze all this information. Using the analyzed data, the concerned authorities could take further decisions keeping the individual’s opinions in mind.
 
