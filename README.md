@@ -6,6 +6,8 @@ WEBAPP LINK: [Click Here](https://sentilyzerr.herokuapp.com/news.html)
 
 Presentation Link: [Click Here](https://docs.google.com/presentation/d/17Syv9AWA1bY8wvl-wlht4FNbrq0GDAMa6pi90L3hvRY/edit)
 
+Final Report Link: [Click Here](https://docs.google.com/document/d/1H2iv5WmbJ5pePa35bvbLoIsAvgVLfa1lQzKoGqyziAY/edit?usp=sharing)
+
 > Problem Statement: Nowadays there is a huge amount of data available on the internet, especially social media. Monitoring all this data would allow us to gain an overview of the wider public opinion behind different states of affairs. We are living in the middle of a pandemic and people are choosing social media platforms to express their opinions about all the government decisions. There is a need to analyze all this information. Using the analyzed data, the concerned authorities could take further decisions keeping the individual’s opinions in mind.
 
 > Solution: Sentilyzerr is a web-app which is used to visualize the results of our sentiment analysis model's results. In this app, we focused on building a sentiment analysis model that will analyze all the data related to Covid-19 on Twitter. We created data sets of different behavior of people on the recent decisions of the government. After building the machine learning model we would visualize it. This web-app is a user- friendly dashboard to visualize all the analyzed data in the form of graphs so that it can be easily interpreted by the end-user. Our project will be the link between the government, organizations, and the public. The authorities will become more acquainted with how the individuals feel about their choices.
