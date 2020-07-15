@@ -30,9 +30,26 @@ Presentation Link: [Click Here](https://docs.google.com/presentation/d/17Syv9AWA
 
 1. Install nodejs. (if you don't have it)
 2. Clone the repo to your local system.
-3. Open your shell/terminal and get to the directory where you cloned the repo.
-4. Use the following command `node install` to install dependencies.
-5. Use the following command `node start` to run the app.
-6. Open your browser and go to the following address `localhost:3000`
+3. Change the API creds in ```server.js``` and ```news.js```
+
+In ```server.js``` go to to ```new Twit``` and change the creds with your creds:
+```
+var T = new Twit({
+  consumer_key: "YOUR_CONSUMER_KEY",
+  consumer_secret: "YOUR_CONSUMER_SECRET",
+  access_token: "YOUR_ACCESS_TOKEN",
+  access_token_secret: "YOUR_ACCESS_TOKEN_SECRET",
+});
+```
+In ```news.js``` go to ```getData2()``` which is the second last function defined and put your API token there in the url of the ```fetch``` method:
+```
+ const response = await fetch(
+    "https://gnews.io/api/v3/search?q=covid%20india&country=in&token=YOUR_API_TOKEN"
+  );
+```
+4. Open your shell/terminal and get to the directory where you cloned the repo.
+5. Use the following command `node install` to install dependencies.
+6. Use the following command `node start` to run the app.
+7. Open your browser and go to the following address `localhost:3000`
 
 > Note: If your port 3000 is already in use then change the port number in the server.js file and repeat step 5 and go to the address `localhost:PORT` where PORT is the number that you changed in the file.
