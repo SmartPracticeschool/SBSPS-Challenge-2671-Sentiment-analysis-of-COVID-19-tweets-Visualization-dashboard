@@ -1,4 +1,4 @@
-# Python code Explanation:  
+# Python code Explanation: 
 
 ## 1. EXTRACTING DATA
 
