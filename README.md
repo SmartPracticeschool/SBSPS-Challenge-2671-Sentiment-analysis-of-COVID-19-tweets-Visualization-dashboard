@@ -14,7 +14,9 @@ Final Report Link: [Click Here](https://docs.google.com/document/d/1H2iv5WmbJ5pe
 
 #### The app contains the following features:
 
-```Main Dashboard```: This main Dashboard is the home page of the web-app. This contains different charts for the results of the sentiment analysis. The charts are interactive and you can remove or add the data with a click.
+```Homepage```: This is the home page of the web-app. This contains information about our web-app and all its features. This page contains information about COVID-19, symptoms and preventive measures from the virus. It is an introductory page to our app.
+
+```Main Dashboard```: This main Dashboard contains different charts for the results of the sentiment analysis. The charts are interactive and you can remove or add the data with a click.
 
 ```Locolyzer```: This page contains different charts for the results of the sentiment analysis done location-wise. We have selected main 6 locations (Delhi, Mumbai, Chennai, Kolkata, Hyderabad and Bangalore) and we will visualize the results according to the location. The location and data can be changed with one click.
 
