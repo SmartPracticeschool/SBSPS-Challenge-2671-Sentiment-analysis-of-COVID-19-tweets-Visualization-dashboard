@@ -2,7 +2,7 @@
 
 DEMO LINK: [GDrive Link](https://drive.google.com/file/d/1hqrrcgt8x-2NpA6eKY_2zZFJ2WNDb2ZU/view?usp=sharing) or [Youtube Video Link](https://youtu.be/EizjqMifxjo)
 
-WEBAPP LINK: [Click Here](https://sentilyzerr.herokuapp.com/news.html)
+WEBAPP LINK: [Click Here](https://sentilyzerr.herokuapp.com/index.html)
 
 Presentation Link: [Click Here](https://docs.google.com/presentation/d/17Syv9AWA1bY8wvl-wlht4FNbrq0GDAMa6pi90L3hvRY/edit)
 
