@@ -231,7 +231,7 @@ getData2();
 // Making a function to fetch data from the GNews api
 async function getData2() {
   const response = await fetch(
-    "https://gnews.io/api/v3/search?q=covid%20india&country=in&token=6f351474b542367c3a54736c1576d9e3"
+    "https://gnews.io/api/v3/search?q=covid%20india&country=in&token=YOUR_API_TOKEN"
   );
   const data = await response.json();
 
