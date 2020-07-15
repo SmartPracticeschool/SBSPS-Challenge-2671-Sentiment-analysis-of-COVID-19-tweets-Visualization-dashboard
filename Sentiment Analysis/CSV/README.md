@@ -1,1 +1,1 @@
-This folder contains all the CSV that were generated during the project.
+This folder contains all the CSVs that were generated during the making of the project.
