@@ -11,10 +11,10 @@ var sent = { happy: 0, neutral: 0, sad: 0 };
 // making new Sentiment and Twit objects
 var sentiment = new Sentiment();
 var T = new Twit({
-  consumer_key: "SwDQ4GSqA8WIlttQnVxMO4GuV",
-  consumer_secret: "Yvpn5y8mGGAzRZW9jMmDjbJ0dJmkbxwfFoOBNR1Z5lxHvfHrxR",
-  access_token: "837759716910596096-USg6DETZYYU2tlLOmi0hC7MG77hCFs0",
-  access_token_secret: "HIyVrBP2taKx7RqprIxSgNuVHV0JczyjcWmAlhNj1lVue",
+  consumer_key: "YOUR_CONSUMER_KEY",
+  consumer_secret: "YOUR_CONSUMER_SECRET",
+  access_token: "YOUR_ACCESS_TOKEN",
+  access_token_secret: "YOUR_ACCESS_TOKEN_SECRET",
 });
 
 // Calling getTwitAnalysis
